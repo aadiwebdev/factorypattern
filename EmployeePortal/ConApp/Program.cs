@@ -12,9 +12,9 @@ public class  Program
 
         public static void Main()
         {
-            LoginModel loginModel;
-            RegistrationModel registrationModel;
-            Menu menu = new Menu(); ;
+            ModelFactory modelFactory=null;
+            IModel model;
+            Menu menu = new Menu(); 
              string firstName, lastName, emailAddress, password, confirmPassword,userLoginEmail,userLoginPassword;
              string isStudent,message=string.Empty;
             while (true)
@@ -31,8 +31,9 @@ public class  Program
                         userLoginEmail = Console.ReadLine();
                         Console.WriteLine("\nEnter Password..\n");
                         userLoginPassword = menu.GetPassword().ToPlainString();
-                        loginModel = new LoginModel(userLoginEmail, userLoginPassword);
-                        message = menu.ValidateLogin(loginModel);
+                        //loginModel = new LoginModel(userLoginEmail, userLoginPassword);
+                        model = modelFactory.getModel("login");
+                        message = menu.ValidateLogin(model);
                         if (!message.Equals(StringLiterals._success))
                         {
                             Console.WriteLine(message);
@@ -55,8 +56,8 @@ public class  Program
                         confirmPassword = menu.GetPassword().ToPlainString();
                         Console.WriteLine("\nAre you a Student or Not.");
                         isStudent = Console.ReadLine().ToLower();
-                        registrationModel = new RegistrationModel(firstName,lastName,emailAddress,password,confirmPassword,isStudent);
-                        message = menu.RegisterUser(registrationModel);
+                        model =modelfactory.getModel("register");
+                        message = menu.RegisterUser(model);
                         if (!message.Equals(StringLiterals._success))
                         {
                             Console.WriteLine(message);

@@ -12,3 +12,7 @@ C:\Users\aditya.tangirala\source\repos\EmployeePortal\ConApp\bin\Debug\Repositor
 C:\Users\aditya.tangirala\source\repos\EmployeePortal\ConApp\obj\Debug\ConApp.csproj.CopyComplete
 C:\Users\aditya.tangirala\source\repos\EmployeePortal\ConApp\obj\Debug\ConApp.exe
 C:\Users\aditya.tangirala\source\repos\EmployeePortal\ConApp\obj\Debug\ConApp.pdb
+C:\Users\AdItYaSaI\Desktop\factorypattern\EmployeePortal\ConApp\obj\Debug\ConApp.csprojAssemblyReference.cache
+C:\Users\AdItYaSaI\Desktop\factorypattern\EmployeePortal\ConApp\obj\Debug\ConApp.csproj.CoreCompileInputs.cache
+C:\Users\AdItYaSaI\Desktop\factorypattern\EmployeePortal\ConApp\obj\Debug\ConApp.exe
+C:\Users\AdItYaSaI\Desktop\factorypattern\EmployeePortal\ConApp\obj\Debug\ConApp.pdb

@@ -1,47 +1,30 @@
-﻿using Domain.Models;
-using Domain.StringLiterals;
-using System;
+﻿using Domain;
+using Domain.Models;
 using System.Linq;
 
 namespace Repository
 {
     public class AuthenticationRepo
     {
-        /// <summary>
-        /// It is used to validate login
-        /// </summary>
-        /// <param name="loginModel"></param>
-        /// <returns></returns>
-        public string ValidateLogin(LoginModel loginModel)
+        public string ValidateLogin(IModel loginModel)
         {
-            if (DataSource._userList.Any(m => m.EmailAddress == loginModel.EmailAddress && m.Password == loginModel.Password))
-            {
-                return StringLiterals._success;
-            }
-            return StringLiterals._loginFailed;
+            return DataSource._userList.Any(m => m.EmailAddress == loginModel.EmailAddress && m.Password == loginModel.Password);
         }
-        /// <summary>
-        /// It is used to register user.
-        /// </summary>
-        /// <param name="registrationModel"></param>
-        /// <returns></returns>
-        public string RegisterUser(RegistrationModel registrationModel)
+        public string RegisterUser(IModel registrationModel)
         {
             if (!DataSource._userList.Any(m => m.EmailAddress == registrationModel.EmailAddress))
             {
                 UserModel userModel = new UserModel()
                 {
-                    FirstName = registrationModel.FirstName,
+                    FirstName = registrationModel.EmailAddress,
                     LastName = registrationModel.LastName,
                     EmailAddress = registrationModel.EmailAddress,
                     Password = registrationModel.Password,
-                    ConfirmPassword = registrationModel.ConfirmPassword,
-                    IsStudent = registrationModel.IsStudent
+                    ConfirmPassword = registrationModel.ConfirmPassword
                 };
                 DataSource._userList.Add(userModel);
-                return StringLiterals._success;
             }
-            return StringLiterals._registrationFailed;
+            return false;
         }
     }
 }

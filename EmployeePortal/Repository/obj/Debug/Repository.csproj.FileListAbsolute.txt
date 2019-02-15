@@ -1,0 +1,6 @@
+C:\Users\AdItYaSaI\Desktop\factorypattern\EmployeePortal\Repository\bin\Debug\Repository.dll
+C:\Users\AdItYaSaI\Desktop\factorypattern\EmployeePortal\Repository\bin\Debug\Repository.pdb
+C:\Users\AdItYaSaI\Desktop\factorypattern\EmployeePortal\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+C:\Users\AdItYaSaI\Desktop\factorypattern\EmployeePortal\Repository\obj\Debug\Repository.dll
+C:\Users\AdItYaSaI\Desktop\factorypattern\EmployeePortal\Repository\obj\Debug\Repository.pdb
+C:\Users\AdItYaSaI\Desktop\factorypattern\EmployeePortal\Repository\obj\Debug\Repository.csprojAssemblyReference.cache

@@ -1,4 +1,5 @@
-﻿using Domain.Models;
+﻿using Domain;
+using Domain.Models;
 using Domain.StringLiterals;
 using Repository;
 using System;
@@ -18,7 +19,7 @@ namespace Business
         /// </summary>
         /// <param name="loginModel"></param>
         /// <returns></returns>
-        public string ValidateLogin(LoginModel loginModel)
+        public string ValidateLogin(IModel loginModel)
         {
             if (Validations.ValidateEmailAddress(loginModel.EmailAddress).Equals(StringLiterals._success))
             {
@@ -35,7 +36,7 @@ namespace Business
         /// </summary>
         /// <param name="registrationModel"></param>
         /// <returns></returns>
-        public string RegisterUser(RegistrationModel registrationModel)
+        public string RegisterUser(IModel registrationModel)
         {
             if (Validations.ValidateEmailAddress(registrationModel.EmailAddress).Equals(StringLiterals._success))
             {

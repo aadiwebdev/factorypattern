@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Business"
+    "\\Business",
+    "\\Domain\\Models"
   ],
-  "SelectedNode": "\\Business\\Validations.cs",
+  "SelectedNode": "\\EmployeePortal.sln",
   "PreviewInSolutionExplorer": false
 }

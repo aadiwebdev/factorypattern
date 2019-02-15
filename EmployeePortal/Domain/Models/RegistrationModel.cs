@@ -1,7 +1,11 @@
 ﻿namespace Domain.Models
 {
-    public class RegistrationModel
+    public class RegistrationModel:IRegisterUser
     {
+        public RegistrationModel()
+        {
+        }
+
         public RegistrationModel(string firstName, string lastName, string emailAddress, string password, string confirmPassword,string isStudent)
         {
             FirstName = firstName;

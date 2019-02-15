@@ -41,10 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Enums\UserRoleChoice.cs" />
     <Compile Include="Enums\UserSelectionChoice.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="ModelFactory.cs" />
+    <Compile Include="Models\IModel.cs" />
+    <Compile Include="Models\IRegisterUser.cs" />
+    <Compile Include="Models\IUserLogin.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\RegistrationModel.cs" />
     <Compile Include="Models\UserModel.cs" />

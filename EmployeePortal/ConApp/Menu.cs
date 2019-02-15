@@ -1,4 +1,5 @@
 ﻿using Business;
+using Domain;
 using Domain.Enums;
 using Domain.Models;
 using Domain.StringLiterals;
@@ -41,12 +42,12 @@ namespace ConApp
             }
             return authBusiness.RegisterUser(registrationModel);
         }
-        ./// <summary>
+        /// <summary>
         ///It is used to validate the user credentails
         /// </summary>
         /// <param name="loginModel"></param>
         /// <returns></returns>
-        public string ValidateLogin(LoginModel loginModel)
+        public string ValidateLogin(IModel loginModel)
         {
             if (authBusiness.ValidateLogin(loginModel).Equals(StringLiterals._success))
             {
